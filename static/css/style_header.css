@@ -1,0 +1,179 @@
+/* Header CSS */
+
+
+/* Full Icon */
+.icon-full-wrapper{
+    text-align: center;
+}
+
+.icon-full-wrapper img.icon-full-img{
+    max-width: 240px;
+    max-height: 240px;
+    height: auto;
+    -webkit-filter: drop-shadow(5px 5px 0 #00000080)
+                    drop-shadow(-5px -5px 0 #ffffff80);
+    filter: drop-shadow(5px 5px 0 #00000080)
+            drop-shadow(-5px -5px 0 #ffffff80);
+}
+
+h1.text-emph{
+    font-size: 3rem;
+    font-style: italic;
+}
+
+@media (max-width: 575px){
+    h1.text-emph{
+        font-size: 2rem;
+    }
+
+    .icon-full-wrapper img.icon-full-img{
+        max-width: 180px;
+        max-height: 180px;
+    }
+}
+
+
+/* Title */
+.icon-full-title{
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.icon-sm-title{
+    margin-bottom: 0;
+}
+
+span.title-blink{
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 800;
+    font-size: 4rem;
+    box-shadow: 0 8px 1rem #00000011;
+}
+
+span.title-blink::before{
+    position: absolute;
+    top: -240px;
+    left: -240px;
+    width: 600px;
+    height: 600px;
+    content: ' ';
+    background: url(../images/rays.png);
+    background-size: contain;
+    background-blend-mode: color-dodge;
+    background-color: #ede2e0;
+    box-shadow: 0 0 3rem 17px #ede2e0;
+    border-radius: 50%;
+    opacity: 0;
+    animation: blink 1.2s linear infinite;
+    z-index: -1;
+    transition: all 0.15s;
+}
+
+span.title-blink::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ' ';
+    border: 10px solid #fffd00;
+    border-radius: 50%;
+    opacity: 0;
+    animation: blink 1.2s linear infinite;
+    transition: all 0.15s;
+}
+
+span.title-blink.title-blink-col1{ background-color: #78de52; }
+span.title-blink.title-blink-col2{ background-color: #f8c51e; }
+span.title-blink.title-blink-col3{ background-color: #2b97ff; }
+span.title-blink.title-blink-col4{ background-color: #ed4f29; }
+
+span.title-blink.title-blink-col1::after,
+span.title-blink.title-blink-col1::before { animation-delay: 0;}
+
+span.title-blink.title-blink-col2::after,
+span.title-blink.title-blink-col2::before { animation-delay: 0.3s;}
+
+span.title-blink.title-blink-col3::after,
+span.title-blink.title-blink-col3::before { animation-delay: 0.6s;}
+
+span.title-blink.title-blink-col4::after,
+span.title-blink.title-blink-col4::before { animation-delay: 0.9s;}
+
+@keyframes blink{
+    0%{opacity: 0; transform: rotate(0deg);}
+    6.25%{opacity: 1;}
+    18.75%{opacity: 1;}
+    25%{opacity: 0;}
+    100%{transform: rotate(60deg);}
+}
+
+
+@media (max-width: 767px){
+    .icon-full-title{
+        margin-top: 2rem;
+    }
+
+    span.title-blink{
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 575px){
+    span.title-blink{
+        width: calc(25% - 1.4rem);
+        height: 60px;
+        font-size: 2rem;
+    }
+}
+
+.icon-sm-title span.title-blink{
+    width: 30px;
+    height: 30px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0 0.1rem;
+}
+.icon-sm-title span.title-blink::before{
+    top: -285px;
+    left: -285px;
+    width: 600px;
+    height: 600px;
+}
+
+.icon-sm-title span.title-blink::after{
+    border-width: 5px;
+}
+
+.icon-sm-wrapper{
+    position: relative;
+}
+
+.icon-sm-wrapper .icon-sm-title{
+    z-index: 2;
+}
+
+.icon-sm-wrapper .icon-sm-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: auto;
+}
+.icon-sm-wrapper .icon-sm-img2{
+    width: 40px;
+    z-index: 0;
+    top: 80%;
+    left: 40%;
+}

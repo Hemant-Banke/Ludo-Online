@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Ludo Online</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+        <link rel="stylesheet" href="./static/css/main.css">
+        <link rel="stylesheet" href="./static/css/style_header.css">
+    </head>
+    <body>
+
+
+        <!-- Loading Wrapper -->
+        <div class="wrapper">
+            <div class="container py-3">
+                <div class="d-flex justify-content-between"></div>
+
+                <div class="icon-sm-wrapper mb-3">
+                    <h1 class="icon-sm-title">
+                        <span class="title-blink title-blink-col1">L</span>
+                        <span class="title-blink title-blink-col2">U</span>
+                        <span class="title-blink title-blink-col3">D</span>
+                        <span class="title-blink title-blink-col4">O</span>
+                    </h1>
+                    <img src="./static/images/pin_green.png" alt="Ludo Online" class="icon-sm-img img-border-dark">
+                    <img src="./static/images/ludo_sm.png" alt="Ludo Online" class="icon-sm-img icon-sm-img2">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- jQuery -->
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+        <!-- Popper js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script>
+
+            // Adjust height to ludo header
+            $( window ).resize(adjustHeight);
+
+            function adjustHeight() {
+                var width = $('span.title-blink').css('width');
+                $('span.title-blink').css('height', width);
+            }
+            adjustHeight();
+        </script>
+
+
+        <script>
+            // Temp
+            $('#btn-signup, #btn-signin').on('click', function(){
+                window.location.href = './main_ppage.html';
+            });
+        </script>
+    </body>
+</html>
